@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Slider with Swiper.js</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+           
+            <div class="swiper-slide"><img src="img/ph.1.avif" alt=""></div>
+            <div class="swiper-slide"><img src="img/ph.2.avif" alt=""></div>
+            <div class="swiper-slide"><img src="img/ph.3.avif" alt=""></div>
+            <div class="swiper-slide"><img src="img/photo 5.avif" alt=""></div>
+            
+        
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+    <script src="script.js">
+      
+
+var swiper = new Swiper('.swiper-container', {
+  
+    direction: 'horizontal',
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+     
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
+    }
+});
+
+    </script>
+</body>
+</html>
+
